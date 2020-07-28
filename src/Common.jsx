@@ -14,7 +14,7 @@ const Common=(props)=>{
                                     <h1 className="fs-1" >{props.name} <br/> With <strong className="brand-name" >Bhargav Patel</strong></h1>
                                     <h2 className="pt-5 fs-2">we are the Team of talented developer Making Website</h2>
                                     <div className="mt-3">
-                                        <NavLink to={props.visit} className="btn btn-outline-primary" style={{borderRadius:25}}>{props.btname}</NavLink>
+                                        <NavLink to={props.visit} className="btn btn-outline-info" style={{borderRadius:25}}>{props.btname}</NavLink>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 pt-5 ">

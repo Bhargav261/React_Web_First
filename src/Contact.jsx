@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Contact=()=>{
+
+    const history=useHistory();
 
     const [data,setData]=useState({
         fullname:"",
@@ -22,6 +25,7 @@ const Contact=()=>{
     const formSubmit=(e)=>{
         e.preventDefault();
         alert (`My Name is : ${data.fullname} My Phone Number : ${data.phone} My Email : ${data.email} My Message : ${data.msg}`);
+        history.goBack();
     }
 
     return(
@@ -50,7 +54,7 @@ const Contact=()=>{
                                 <textarea name="msg" value={data.msg} onChange={InputEvent}  className="form-control" rows="3" placeholder="Enter Message" required></textarea>
                             </div>
                             <div className="col-12">
-                                <button className="btn btn-outline-primary" type="submit"> 
+                                <button className="btn btn-outline-info" type="submit"> 
                                     Submit
                                 </button>
                             </div>
